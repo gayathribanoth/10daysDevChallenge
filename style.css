@@ -1,112 +1,189 @@
 *{
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    color:#486282;
 }
 
-Body{
-    background:rgb(228, 237, 247);
+body{
+    background-color: rgb(234, 230, 223);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+    font-size:1.2em;
+}
+
+nav{
+    display:inline-block;
+    width: 100%;
+}
+
+#nav-bar{
     display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.logo img{
+    margin-top:13px;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color:  #25D366;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 25px;
+}
+
+button{
+    border-radius: 30px;
+    border:1px solid black;
+    background-color:  #25D366;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    font-size:1em;
+}
+
+.dbutton{
+    margin-right: 10px;
+}
+
+.dbutton img{
+    margin-bottom:-2px;
+    display: inline-block;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;
+}
+
+.instructions{
+    width: 950px;
+    margin-right: 50px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#heading{
+    font-size: 1.8em;
 }
 
 .container{
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    padding: 30px;
-}
-
-.share{
     display:flex;
+    background-color: white;
+    border-radius:30px;
+    width: 970px;
+    padding-inline:50px;
+    padding-block:20px;
     align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
+    border: 1px solid black;
+    margin:40px;
+    height: 460px;
+    text-align: justify;
 }
 
-ul,li{
-    display:inline-block;
-    margin:5px;
-    cursor:pointer;
-    margin-block: 15px;
+.more-links a{
+    text-decoration-color: rgb(43, 183, 75);
+    text-decoration-thickness: 2px;
+    color:black;
+    font-size: 15px;
 }
 
-li i{
-    background-color: whitesmoke;
-    padding:25px;
-    border-radius: 45px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size:23px;
+.more-links p{
+    margin-block:10px;
 }
 
-ul{
-    text-align: center;
+ol{
+    margin-block: 20px;
 }
 
-ul p{
-    margin-top:10px;
-    font-size: 18px;
+ol img{
+    display: inline-block;
+    margin-bottom: -3px;
 }
 
-li:hover i,
-li:hover p,
-.link i {
-    color:orangered;
+li{
+    font-size:1.2em;
+    margin-inline-start: 20px;
+    padding:5px;
 }
 
-li i:hover{
-    background-color: rgb(244, 175, 150);
+.QRcode{
+    text-align: left;
 }
 
-.chat{
-    display:inline-block;
-}
-
-.caption p{
-    text-align: center;
-    margin-bottom: 25px;
-    font-size:20px;
-    color: rgb(194, 190, 190);
-    font-weight: bold;
-}
-
-.link{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.QRcode, img{
+    display: block;
     margin-bottom: 10px;
 }
-.link i{
-    font-size: 20px;
-    margin-left:10px;
-    font-size:25px;
-    cursor:pointer;
+
+.QRcode p{
+    display: inline-block;
+    font-size:15px;
 }
-.link a{
-    color:gray;
-    background-color: whitesmoke;
-    padding-block: 10px;
-    padding-inline:15px;
-    border-radius: 20px;
+
+.QRcode{
+    width: 275px;
+    padding-left:-20px;
 }
-.container:hover{
-    box-shadow: 5px 5px 5px 1px;
+
+.inside-footer > p{
+    display:inline-block;
+    font-size: 15px;
+    color: gray;
 }
-#close:hover{
-    color:gray;
+.inside-footer{
+    display:flex;
+    place-items:center;
+}
+
+.inside-footer svg{
+    color: gray;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 15px;
+    border: 2px solid #000;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    background-color: white;
     cursor: pointer;
-}
-#close{
-    color:lightgray; 
-    font-size:40px;
-}
-.link a:hover{
-    color:#486282;
-}
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: green;
+    border: 2px solid green;
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: "✔"; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
